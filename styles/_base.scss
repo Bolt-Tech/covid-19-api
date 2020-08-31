@@ -1,0 +1,167 @@
+/**********
+*   Base  *
+***********/
+
+/*Mobile Responsive*/
+.boxContainer {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+/*Forces bottom map api to go to bottom from contents*/
+    min-height: calc(85vh - 70px);
+  }
+  
+  /*WebPage Title*/
+  .Main_Title{
+    text-align: center;
+    font-size: 5vw;
+    font-family: Georgia;
+    font-weight: bold;
+    color: #81ecec;
+    border: solid #00cec9 3px;
+    background-color: #0070703b;
+    padding: 20px 0 20px 0;
+    
+    &:hover {
+    color: #00cec9;
+    transition: 0.3s;
+    border-radius: 15px;
+    background-color: #92929246;
+    box-shadow: 0px 0px 12px 10px;
+    background-color: #fffffff3;
+  }
+}
+  //[Start Changing font size & Paddings for mobile]
+  .select-country {
+    display: flow-root;
+    margin: 15px auto;
+    font-size: 4.8vw;
+    color: cyan;
+    border: #00a1a1 solid 3px;
+    background-color: #004242ef;
+    width: 80%;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  .labelCountry {
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*Countery Text Selector*/
+  #listCountry {
+    padding: 5px 10px 5px 10px;
+    font-size: 3vw;
+    margin: 10px 0px 10px 5px;
+  }
+
+  /*[API Table Container] after Select Options*/
+  main {
+    text-align: center;
+    overflow-x:auto; /*Adds horizontal scroll for responsive*/
+  }
+
+  .tableStatistic, th, td{
+    background-color: #004242ef;
+    color: white;
+    border: #00a1a1 solid 2px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 20px auto;
+    padding: 10px;
+    width: 100%;
+  }
+  th { font-size: 3vw; }
+
+  td {
+    background-color: #00a3ac4f;
+    font-size: 3vw;
+   }
+
+  .newCases { background-color: darkgoldenrod; }
+
+  .newRecovered { background-color: green; }
+
+  .newDeaths { background-color: crimson; }
+
+  .population { background-color: purple; }
+
+  /*[Flag] in Table Data Statistic*/
+  .flag {
+    height: auto;
+    width: 5rem;
+  }
+
+/*Fully responsive table for mobile & tablet*/
+@media only screen and (max-width: 1500px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    color: white;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+/*Hides Table th when on mobile/tablet*/
+  th { display: none; }
+  
+  tr { border: 1px solid #00a1a1; }
+  
+  td {
+    border: none;
+    border-bottom: 1px solid #00a1a1;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 110px;
+  }
+  td:before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+  /*Label text like HTML table head [th]*/
+  td:nth-of-type(1):before { content: "Flag:"; }
+  td:nth-of-type(2):before { content: "Continent:"; }
+  td:nth-of-type(3):before { content: "Country:"; }
+  td:nth-of-type(4):before { content: "Cases:";}
+  td:nth-of-type(5):before { content: "New Cases:";}
+  td:nth-of-type(6):before { content: "Recovered:";}
+  td:nth-of-type(7):before { content: "New Recovered:";}
+  td:nth-of-type(8):before { content: "Death:";}
+  td:nth-of-type(9):before { content: "New Death:";}
+  td:nth-of-type(10):before { content: "Active:";}
+  td:nth-of-type(11):before { content: "Population:";}
+}
+
+  /*Desktop*/
+@media only screen and (min-width: 992px) {
+  
+  .Main_Title { font-size: 2vw; }
+
+  .select-country {
+    font-size: 1.5vw;
+    width: 50%;
+    }
+
+    #listCountry { font-size: 1.5vw; }
+
+    .tableStatistic, td, th { padding: 10px 20px 10px 20px; }
+
+    th { font-size: 1.2vw; }
+  
+    td { font-size: 1.5vw; }
+
+    .flag {
+      height: auto;
+      width: 10rem;
+    }
+}

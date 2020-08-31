@@ -1,0 +1,19 @@
+/************
+*   Layout  *
+*************/
+
+* {
+    font-family: 'Arimo', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/img/globe.png');
+    background-color: #2d3436;
+    margin: 0 auto;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

@@ -1,0 +1,9 @@
+#Ignore Visual Studio Preference Settings
+.vscode/
+
+#Ignore .css and .css.map files that compass generates
+*.css
+*.css.map
+
+#Ignore config API Key [Always store your key in your safe file location]
+config.js

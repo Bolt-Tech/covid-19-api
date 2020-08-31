@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coronavirus API Data</title>
+    <link rel="stylesheet" href="styles/main/main.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet'/>
+</head>
+
+<body>
+    <!-----[Contents - Start]----->
+
+    <div class="boxContainer">
+        <h1 class="Main_Title">Coronavirus | COVID-19 Statistics</h1>
+        <!--Country Dropdown-->
+        <div class="select-country">
+            <label for="country" class="labelCountry">Select The Country Region to Display Status:</label>
+            <select id="listCountry" name="country" required>
+                <option value="">Select Country...</option>
+            </select>
+        </div>
+
+        <!--Body for Mapbox API-->
+        <div id='map'></div>
+
+        <main></main>
+    </div>
+
+    <!-----[Contents - End ]----->
+    <script src="config.js"></script>
+    <script src="script-api.js"></script>
+</body>
+
+</html>

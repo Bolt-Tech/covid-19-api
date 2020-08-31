@@ -1,0 +1,20 @@
+/*************
+*   Map API  *
+**************/
+
+#map {
+    margin: 0 auto;
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px darkcyan solid;
+    background-color: #00a3ac4f;
+}
+
+/*Desktop*/
+@media only screen and (min-width: 992px) {
+    #map {
+        width: 70vw;
+        height: 400px;
+    }
+}
