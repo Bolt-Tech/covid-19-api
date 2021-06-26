@@ -1,5 +1,5 @@
 /*=============================*
- * (COVID-19) CoronaVirus Page
+ * COVID-19 - Coronavirus Page
  *=============================*/
 
 //[1st] Fetch will display dropdown country list and once you select one, it will print down.
@@ -18,13 +18,13 @@ function setMap() { //Get your free API Key from mapbox.com
 
 window.addEventListener('load', () => {
     setMap(); //Map will function onload
-    
+
     fetch('https://corona.lmao.ninja/v2/countries/')
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-//Create a new array and assign data and sort them in an alphabet order
+            //Create a new array and assign data and sort them in an alphabet order
             arrCountry = [data.length];
             data.forEach(element => {
                 arrCountry.push(element.country);
@@ -60,28 +60,28 @@ selectElement.addEventListener('change', (event) => {
         })
         .then(function (data) {
 
-//Map Settings API from mapbox.com [Start]
-  let map = setMap(),
-      long = data.countryInfo.long,
-      lat = data.countryInfo.lat;
+            //Map Settings API from mapbox.com [Start]
+            let map = setMap(),
+                long = data.countryInfo.long,
+                lat = data.countryInfo.lat;
 
-  map.flyTo({
-      center: [long, lat],
-      bearing: 0,
-      essential: true,
-      speed: 0.8,
-      curve: 1,
-      zoom: 4.0
-  });
+            map.flyTo({
+                center: [long, lat],
+                bearing: 0,
+                essential: true,
+                speed: 0.8,
+                curve: 1,
+                zoom: 4.0
+            });
 
-  //Get longitude and latitude from [1st] fetch above
-  var marker = new mapboxgl.Marker()
-      .setLngLat([long, lat])
-      .addTo(map);
-  // Adds zoom and rotation controls to the map in top left corner.
-  map.addControl(new mapboxgl.NavigationControl());
- 
-//Map Settings API from mapbox.com [End]
+            //Get longitude and latitude from [1st] fetch above
+            var marker = new mapboxgl.Marker()
+                .setLngLat([long, lat])
+                .addTo(map);
+            // Adds zoom and rotation controls to the map in top left corner.
+            map.addControl(new mapboxgl.NavigationControl());
+
+            //Map Settings API from mapbox.com [End]
 
             let statistic = `
         <table class="tableStatistic">
@@ -99,22 +99,21 @@ selectElement.addEventListener('change', (event) => {
             <th>Population</th>
         </tr>
         `;
-            //This'll log data list for (debug purpose)
-            //console.log(data);
+            //console.log(data); //This'll log full data list for (debug purpose)
 
             statistic += `
             <tr>
                 <td><img class="flag" src="${data.countryInfo.flag}"></td>
-                <td>${data.continent}</td>
+                <td>${data.continent.toLocaleString()}</td>
                 <td>${data.country}</td>
-                <td>${data.cases}</td>
-                <td class="newCases">${data.todayCases}</td>
-                <td>${data.recovered}</td>
-                <td class="newRecovered">${data.todayRecovered}</td>
-                <td>${data.deaths}</td>
-                <td class="newDeaths">${data.todayDeaths}</td>
-                <td>${data.active}</td>
-                <td class="population">${data.population}</td>
+                <td>${data.cases.toLocaleString()}</td>
+                <td class="newCases">${data.todayCases.toLocaleString()}</td>
+                <td>${data.recovered.toLocaleString()}</td>
+                <td class="newRecovered">${data.todayRecovered.toLocaleString()}</td>
+                <td>${data.deaths.toLocaleString()}</td>
+                <td class="newDeaths">${data.todayDeaths.toLocaleString()}</td>
+                <td>${data.active.toLocaleString()}</td>
+                <td class="population">${data.population.toLocaleString()}</td>
             </tr>
         </table>
         `;
