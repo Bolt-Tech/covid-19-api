@@ -1,6 +1,6 @@
 # About The Project
 
-## The Second Project Coronavirus Statistic
+## The Second Project Covid-19 (Coronavirus) Statistic
 
 Need to know what's the daily status report of COVID-19 spread and get safe staying at home.
 The website app is responsive with smartphone & tablet. Beautifully wide design and organized table data such as displaying flag, number of cases, active etc. 
@@ -11,8 +11,8 @@ Built with:
 * `SCSS / CSS`
 * `JavaScript & AJAX Fetch API`.
 
-## Demo
-Use the app online at 'url' is coming soon
+## Live demo
+Give it a try exploring this live site: [covid-19 statistics](https://covid-19-worldwide.netlify.app/).
 
 ![Covid-19 Statistic Demo](demo/demo-status.gif)
 
