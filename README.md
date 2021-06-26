@@ -11,6 +11,11 @@ Built with:
 * `SCSS / CSS`
 * `JavaScript & AJAX Fetch API`.
 
+## Demo
+Use the app online at 'url' is coming soon
+
+![Covid-19 Statistic Demo](demo/demo-status.gif)
+
 ## Prerequisites
 
 * **[Visual Studio Code](https://code.visualstudio.com/)** (Compatible with Windows / Mac or Linux) and **must install two extensions:**
@@ -29,7 +34,7 @@ To be able to see live statistics, follow these steps:
 ```JS
 const API_KEY = 'YOUR_MAPBOX_ACCESS_TOKEN';
 ```
-Replace `YOUR_MAPBOX_ACCESS_TOKEN` with your new API key accessToken from [mapbox](https://www.mapbox.com/).
+Replace `YOUR_MAPBOX_ACCESS_TOKEN` with your free API key accessToken from [mapbox](https://www.mapbox.com/).
 
 3. Click `Watch Sass` on bottom right to begin generating all `CSS`.
 
