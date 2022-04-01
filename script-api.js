@@ -4,6 +4,7 @@
 
 //[1st] Fetch will display dropdown country list and once you select one, it will print down.
 const selectElement = document.querySelector('#listCountry');
+const countryURL = 'https://disease.sh/v3/covid-19/countries/';
 
 function setMap() { //Get your free API Key from mapbox.com
     mapboxgl.accessToken = `${API_KEY}`;
@@ -19,7 +20,7 @@ function setMap() { //Get your free API Key from mapbox.com
 window.addEventListener('load', () => {
     setMap(); //Map will function onload
 
-    fetch('https://corona.lmao.ninja/v2/countries/')
+    fetch(countryURL)
         .then(function (response) {
             return response.json();
         })
@@ -54,7 +55,7 @@ window.addEventListener('load', () => {
 selectElement.addEventListener('change', (event) => {
     let selectedVal = event.target.value;
 
-    fetch(`https://disease.sh/v3/covid-19/countries/${selectedVal}`)
+    fetch(countryURL + selectedVal)
         .then(function (response) {
             return response.json();
         })
